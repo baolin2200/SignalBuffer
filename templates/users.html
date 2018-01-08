@@ -1,0 +1,15 @@
+{% load cache %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{ ctime }}</h1>
+
+    {% cache 30 keyname %}    {##}
+        <a style="color: red">{{ ctime }}</a>
+    {% endcache %}
+</body>
+</html>
